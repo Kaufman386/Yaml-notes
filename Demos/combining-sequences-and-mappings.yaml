@@ -1,0 +1,16 @@
+# Sequence of Sequences
+persons:
+  # Sequence of mappings
+  - name: Mike
+    age: 30
+    # Mapping of mappings
+    address:
+      streetname: YAML streetname
+      number: 1
+      zipcode: 123456 
+      city: Programming city
+      country: Holland
+  - name: Makayla
+    age: 34
+    # Mapping of Mappings (using flow-style within block-style) NOT RECOMMENDED TO COMBINE
+    address: { streetname: YAML streetname, number: 1 }

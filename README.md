@@ -177,3 +177,54 @@
     | ------------- | ------------- |
     | Removes line breaks in between texts, except for white lines | Includes all line breaks in between texts and white lines |
 
+### Nested Sequences
+- Sequence of sequences
+```YAML
+# Block-list with flow-style lists (block-list of flow-lists) -> [[yaml, json], [python, javascript]]
+flow_lists:
+- [yaml, json]
+- [python, javascript]
+ 
+# Block-List style with block-style lists (block-list of block-lists) -> [[yaml, json], [python, javascript]]
+block_lists:
+- - yaml
+  - json
+- - python
+  - javascript
+```
+
+### Nested Mappings
+- Mapping of mappings
+- **NOTE:** You cannot use the block-style mapping within a parent flow-style mapping! But you can do the vice-versa
+```YAML
+person:
+    name: Mike
+    age: 30
+    address:
+        streetname: Langstraat
+        number: 1
+        zipcode: 1234AB
+        city: Amsterdam
+        country: The Netherlands
+    dog: { name: Bobby, breed: labradoodle} # Example of a flow-style mapping within a parent block-style mapping
+```
+
+### Combine Sequences and Mappings
+- For a detailed explanation view this [demo](Demos/combining-sequences-and-mappings.yaml) file
+- **NOTE:** You shouldn't mix block-style with flow-style in yaml files. Stick to one style
+```YAML
+languages:
+    - programming:
+        - frontend:
+            - html
+            - css
+            - js
+        - backend:
+            - java
+            - python
+            - c#
+    - data serialization:
+        - yaml
+        - json
+```
+
