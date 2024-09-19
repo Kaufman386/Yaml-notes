@@ -1,0 +1,9 @@
+# Flow style
+[list, as, list, item]
+
+# If you use both styles in one file (not to be confused with combining the styles), you will get an error. 
+# Uncomment below to find out
+# - list
+# - as
+# - list
+# - item

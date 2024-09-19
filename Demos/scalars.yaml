@@ -1,0 +1,29 @@
+# Strings as scalars
+name: mike
+noquotes: whatever without quotes
+# Quotes are optional; however, escaping only works with double quotes
+quotes: "whatever with quotes"
+escape: "she said: \"escaping can only be done in double quoted scalars\""
+
+# Floats
+float: 1.2
+
+# 10-base
+decimal: 123444
+# Octal numeral system is a base-8 (0-7) number system. 
+# NOTE: These MUST start with 0 to let yaml know it's octal
+octal: 0121
+# Hexadecimal is 16-base
+# NOTE: These must start with 0x
+hexadecimal: 0xABC
+
+# Booleans
+boolean: true
+nothing: null
+
+# Note: no two keys CANNOT have the same name
+duplicateKeys: not allowed
+
+# This weird scalar can be a key 
+"123a lot of weird stuff": can be used a duplicateKeys
+moreWeirdStuff: "# This is not a ''comment''"

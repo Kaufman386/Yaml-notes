@@ -1,0 +1,8 @@
+# Mappings Flow Style
+# Note: Flow Mappings CANNOT contain flow-style lists
+{ 
+  key: value, 
+  "data serialization language": yaml, 
+  version: 1.2.2, 
+  [java, python, C#, php],
+}

@@ -1,0 +1,10 @@
+language: yaml
+version: 1.2.2
+---
+# Beginning of new document
+And we can have something new here
+# NOTE: If the first scalar doesn't start with a key, then the next cannot either
+# key: "uncommenting this will result in an error"
+# Uncommenting this will also result in an error
+---
+key: but we can create a new document and make more key-value pairs

@@ -1,0 +1,98 @@
+# Show for folding: > and |
+# Show for chomping: +, -, and nothing
+
+
+
+
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines, very important to include some white space:\nAnd some \n more indentation\nAnd some trailing newlines.\n'
+# }
+# NOTE: white-lines result in '\n'...and all 3 trailing white-lines result in a singular '\n'
+multi-line-fold-inequality: >
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+
+
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines, very important to include some white space:\nAnd some \n more indentation\nAnd some trailing newlines.'
+# }
+# NOTE: All 3 trailing white-lines are removed'
+multi-line-chomp-inequality-minus: >-
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+
+
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines, very important to include some white space:\nAnd some \n more indentation\nAnd some trailing newlines.\n\n\n'
+# }
+# NOTE: All 3 trailing white-lines are added'
+multi-line-chomp-inequality-plus: >+
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+
+
+####################################################################################################################################################################################
+####################################################################################################################################################################################
+---
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines,\nvery important to include some white space:\n\nAnd some \n more indentation\nAnd some trailing newlines.\n'
+# }
+# NOTE: All line breaks are included and All 3 trailing white-lines result in a singular \n'
+multi-line-fold-pipe: |
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+
+
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines,\nvery important to include some white space:\n\nAnd some \n more indentation\nAnd some trailing newlines.\n'
+# }
+# NOTE: All line breaks are included and All 3 trailing white-lines are removed'
+multi-line-chomp-pipe-minus: |-
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+
+
+# Running a python file to test what is below will result in...
+# {
+#   'multi-line': 'Some silly text across multiple lines,\nvery important to include some white space:\n\nAnd some \n more indentation\nAnd some trailing newlines.\n\n\n'
+# }
+# NOTE: All line breaks are included and All 3 trailing white-lines are added like \n\n\n'
+multi-line-chomp-pipe-plus: |+
+  Some silly text across multiple lines,
+  Very important to include white space:
+
+  And Some 
+    more indentation
+  And some trailing newlines.
+
+

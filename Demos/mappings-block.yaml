@@ -1,0 +1,10 @@
+# Mapping Block Style 
+key: value
+"data serialization language": yaml
+version: 1.2
+# two spaces (default)
+list: 
+  - java
+  - python
+  - C#
+  - php
