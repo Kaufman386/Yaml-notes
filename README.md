@@ -5,7 +5,7 @@
 <p align="center">
 
 # Table of Contents <!-- omit in toc -->
-- [YAML Basics](#arrow_right-yaml-basics)
+- [YAML Basics](#star-yaml-basics)
     - [Basic Syntax](#arrow_right-basic-syntax)
     - [What is YAML?](#arrow_right-what-is-yaml)
     - [YAML Use Cases](#arrow_right-yaml-use-cases)
@@ -13,7 +13,7 @@
     - [YAML vs JSON](#arrow_right-yaml-vs-json)
     - [Block vs Flow Style](#arrow_right-block-vs-flow-style)
     - [YAML Building Blocks](#arrow_right-yaml-building-blocks)
-- [YAML Advanced Syntax](#yaml-advanced-syntax)
+- [YAML Advanced Syntax](#star-yaml-advanced-syntax)
     - [Overview](#arrow_right-overview)
     - [Folding and Chomping](#arrow_right-folding-and-chomping)
     - [Nested Sequences](#arrow_right-nested-sequences)
@@ -23,7 +23,7 @@
     - [Repeated Nodes](#arrow_right-repeated-nodes)
     - [Tags](#arrow_right-tags)
     - [Schemas](#arrow_right-schemas)
-- [Parsing and Validation](#parsing-and-validation)
+- [Parsing and Validation](#star-parsing-and-validation)
     - [Overview](#arrow_right-overview)
     - [Parsing](#arrow_right-parsing)
     - [Validating](#arrow_right-validating)
@@ -31,7 +31,7 @@
     - [Common YAML mistakes](#arrow_right-common-yaml-mistakes)
     - [Debugging YAML](#arrow_right-debugging-yaml)
 
-# YAML Basics
+# :star: YAML Basics
 ### :arrow_right: Basic Syntax
 - Indentation
 - Sequences/Lists
@@ -168,7 +168,7 @@
   One file can contain multiple documents
   ```
 
-# YAML Advanced Syntax
+# :star: YAML Advanced Syntax
 ### :arrow_right: Overview
 - [Folding and Chomping](#arrow_right-folding-and-chomping)
 - [Nested Sequences](#arrow_right-nested-sequences)
@@ -324,8 +324,7 @@
   ___
 
 
-# Parsing and Validation
-
+# :star: Parsing and Validation
 ### :arrow_right: Overview
 - [Parsing](#arrow_right-parsing)
 - [Validating](#arrow_right-validating)
