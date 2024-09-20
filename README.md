@@ -32,7 +32,7 @@
     - [Debugging YAML](#debugging-yaml)
 
 # YAML Basics
-### Basic Syntax
+### :arrow_right: Basic Syntax
 - Indentation
 - Sequences/Lists
 - Mapping/dictionarys
@@ -40,7 +40,7 @@
 - Comments
 - Documents
 
-### What is YAML?
+### :arrow_right: What is YAML?
 - Data Serialization Lanugage
   - YAML syntax can be used to infer data objects to text, which is useful for sending data around and storing it.
 - The format can later be interpreted and converted back to the original data object. 
@@ -49,7 +49,7 @@
   - Unprintable characters would be whitespace for example
 - Commonly used for data about hosts and infrastructure
 
-### YAML Use Cases
+### :arrow_right: YAML Use Cases
 - Cross-language data sharing
   - Serialize objects in javascript and transfer to a PHP applicaiton
   - The php applicaiton can deserialize the data and use the object in the applicaiton
@@ -63,7 +63,7 @@
   - Works great with languages that match it's data structure
   - Ex: PHP, JS, Python, Perl, and Ruby
 
-### YAML Features
+### :arrow_right: YAML Features
 1. Very readable for humans
    - Note that it is not easy to write good YAML code, but it shouldn't be too hard to understand
 2. Portable between languages and tools
@@ -76,7 +76,7 @@
 6. Extensible
    - Custom data types can be added
 
-### YAML vs JSON
+### :arrow_right: YAML vs JSON
 - YAML is a superset of JSON
   - All portable JSON is valid YAML; although, they're not fully interchangeable
 - When to use JSON vs YAML?
@@ -91,7 +91,7 @@
   | Focuses on supporting native data structures  | Aims to be universally supported |
   | Harder for programming environments to parse and process YAML | Easy to process for programming languages |
 
-### Block vs Flow Style
+### :arrow_right: Block vs Flow Style
 - Supporting JSON (back in 2009) tended to complicate the syntax
 - Now there are two styles when programming in YAML: Block and Flow Style
   - They can be mized and used interchangeably in the YAML file
@@ -103,7 +103,7 @@
     | Preferred style | Best used for one-line situations |
     | YAML's own format for data structure | Well-known, but less human readable JSON syntax |
 
-### YAML Building Blocks
+### :arrow_right: YAML Building Blocks
 - Indentation
   - Default indentation is two spaces
 - Sequences (Lists, Arrays)
@@ -179,7 +179,7 @@
 - [Tags](#tags)
 - [Schemas](#schemas)
 
-### Folding and Chomping
+### :arrow_right: Folding and Chomping
 - There are two types of concepts: Folding and Chomping
 - For a detailed difference between the two, look at the [Demo](Demos/folding-and-chomping.yaml) file
     | <p align="center">Folding</p>  | <p align="center">Chomping</p> |
@@ -193,7 +193,7 @@
     | ------------- | ------------- |
     | Removes line breaks in between texts, except for white lines | Includes all line breaks in between texts and white lines |
 
-### Nested Sequences
+### :arrow_right: Nested Sequences
 - Sequence of sequences
     ```YAML
     # Block-list with flow-style lists (block-list of flow-lists) -> [[yaml, json], [python, javascript]]
@@ -209,7 +209,7 @@
     - javascript
     ```
 
-### Nested Mappings
+### :arrow_right: Nested Mappings
 - Mapping of mappings
 - **NOTE:** You cannot use the block-style mapping within a parent flow-style mapping! But you can do the vice-versa
     ```YAML
@@ -225,7 +225,7 @@
         dog: { name: Bobby, breed: labradoodle } # Example of a flow-style mapping within a parent block-style mapping
     ```
 
-### Combine Sequences and Mappings
+### :arrow_right: Combine Sequences and Mappings
 - For a detailed explanation view this [demo](Demos/combining-sequences-and-mappings.yaml) file
 - **NOTE:** You shouldn't mix block-style with flow-style in yaml files. Stick to one style
     ```YAML
@@ -244,7 +244,7 @@
             - json
     ```
 
-### Dates
+### :arrow_right: Dates
 - Considered a scalar
 - Used for Dates and Timestamps
 - You can return a DATE as a STRING using explicit typing
@@ -255,7 +255,7 @@
     not_a_date: !!str 2022-03-22
     ```
 
-### Repeated Nodes
+### :arrow_right: Repeated Nodes
 - **Nodes** represent a single native data structure (Scalar, Sequence, Mapping)
 - Results in cleaner YAML: DRY (Don't Repeat Yourself)
 
@@ -290,7 +290,7 @@
         name: Makayla
     ```
 
-### Tags
+### :arrow_right: Tags
 - Also known as a "type"
 - Tags give a node a type
 - Untagged nodes are given a type by default
@@ -302,7 +302,7 @@
     unncessary: !!int 20        # No need to add an "int" tag to a INTEGER scalar
     ```
 
-### Schemas
+### :arrow_right: Schemas
 - **YAML Validation:** Contain the rules of YAML and used to validate whether a certain file adheres to the rules
 - Used to create data types
   - Custom Data Types can be added with language-specific schemas
@@ -326,19 +326,19 @@
 
 # Parsing and Validation
 
-### Overview
+### :arrow_right: Overview
 - [Parsing](#parsing)
 - [Validating](#validating)
 - [Parsing and Validating YAML with Python](#parsing-and-validating-yaml-with-python)
 - [Common YAML mistakes](#common-yaml-mistakes)
 - [Debugging YAML](#debugging-yaml)
 
-### Parsing
+### :arrow_right: Parsing
 
-### Validating
+### :arrow_right: Validating
 
-### Parsing and Validating YAML with Python
+### :arrow_right: Parsing and Validating YAML with Python
 
-### Common YAML mistakes
+### :arrow_right: Common YAML mistakes
 
-### Debugging YAML
+### :arrow_right: Debugging YAML
