@@ -5,31 +5,31 @@
 <p align="center">
 
 # Table of Contents <!-- omit in toc -->
-- [YAML Basics](#yaml-basics)
-    - [Basic Syntax](#basic-syntax)
-    - [What is YAML?](#what-is-yaml)
-    - [YAML Use Cases](#yaml-use-cases)
-    - [YAML Features](#yaml-features)
-    - [YAML vs JSON](#yaml-vs-json)
-    - [Block vs Flow Style](#block-vs-flow-style)
-    - [YAML Building Blocks](#yaml-building-blocks)
+- [YAML Basics](#arrow_right-yaml-basics)
+    - [Basic Syntax](#arrow_right-basic-syntax)
+    - [What is YAML?](#arrow_right-what-is-yaml)
+    - [YAML Use Cases](#arrow_right-yaml-use-cases)
+    - [YAML Features](#arrow_right-yaml-features)
+    - [YAML vs JSON](#arrow_right-yaml-vs-json)
+    - [Block vs Flow Style](#arrow_right-block-vs-flow-style)
+    - [YAML Building Blocks](#arrow_right-yaml-building-blocks)
 - [YAML Advanced Syntax](#yaml-advanced-syntax)
     - [Overview](#arrow_right-overview)
-    - [Folding and Chomping](#folding-and-chomping)
-    - [Nested Sequences](#nested-sequences)
-    - [Nested Mappings](#nested-mappings)
-    - [Combine Sequences and Mappings](#combine-sequences-and-mappings)
-    - [Dates](#dates)
-    - [Repeated Nodes](#repeated-nodes)
-    - [Tags](#tags)
-    - [Schemas](#schemas)
+    - [Folding and Chomping](#arrow_right-folding-and-chomping)
+    - [Nested Sequences](#arrow_right-nested-sequences)
+    - [Nested Mappings](#arrow_right-nested-mappings)
+    - [Combine Sequences and Mappings](#arrow_right-combine-sequences-and-mappings)
+    - [Dates](#arrow_right-dates)
+    - [Repeated Nodes](#arrow_right-repeated-nodes)
+    - [Tags](#arrow_right-tags)
+    - [Schemas](#arrow_right-schemas)
 - [Parsing and Validation](#parsing-and-validation)
-    - [Overview](#overview)
-    - [Parsing](#parsing)
-    - [Validating](#validating)
-    - [Parsing and Validating YAML with Python](#parsing-and-validating-yaml-with-python)
-    - [Common YAML mistakes](#common-yaml-mistakes)
-    - [Debugging YAML](#debugging-yaml)
+    - [Overview](#arrow_right-overview)
+    - [Parsing](#arrow_right-parsing)
+    - [Validating](#arrow_right-validating)
+    - [Parsing and Validating YAML with Python](#arrow_right-parsing-and-validating-yaml-with-python)
+    - [Common YAML mistakes](#arrow_right-common-yaml-mistakes)
+    - [Debugging YAML](#arrow_right-debugging-yaml)
 
 # YAML Basics
 ### :arrow_right: Basic Syntax
@@ -170,14 +170,14 @@
 
 # YAML Advanced Syntax
 ### :arrow_right: Overview
-- [Folding and Chomping](#folding-and-chomping)
-- [Nested Sequences](#nested-sequences)
-- [Nested Mappings](#nested-mappings)
-- [Combine Sequences and Mappings](#combine-sequences-and-mappings)
-- [Dates](#dates)
-- [Repeated Nodes](#repeated-nodes)
-- [Tags](#tags)
-- [Schemas](#schemas)
+- [Folding and Chomping](#arrow_right-folding-and-chomping)
+- [Nested Sequences](#arrow_right-nested-sequences)
+- [Nested Mappings](#arrow_right-nested-mappings)
+- [Combine Sequences and Mappings](#arrow_right-combine-sequences-and-mappings)
+- [Dates](#arrow_right-dates)
+- [Repeated Nodes](#arrow_right-repeated-nodes)
+- [Tags](#arrow_right-tags)
+- [Schemas](#arrow_right-schemas)
 
 ### :arrow_right: Folding and Chomping
 - There are two types of concepts: Folding and Chomping
@@ -295,7 +295,7 @@
 - Tags give a node a type
 - Untagged nodes are given a type by default
 - Explicit typing can be done with the "!" character
-- How the tags are interpreted depends on the exact [**schema**](#schemas) that is used to interpret that YAML
+- How the tags are interpreted depends on the exact [**schema**](#arrow_right-schemas) that is used to interpret that YAML
     ```YAML
     no_date: !!str 2022-03-21   # This DATE is being tagged as a STRING
     no_number: !!str 20         # This INTEGER is being tagged as a STRING
@@ -327,11 +327,11 @@
 # Parsing and Validation
 
 ### :arrow_right: Overview
-- [Parsing](#parsing)
-- [Validating](#validating)
-- [Parsing and Validating YAML with Python](#parsing-and-validating-yaml-with-python)
-- [Common YAML mistakes](#common-yaml-mistakes)
-- [Debugging YAML](#debugging-yaml)
+- [Parsing](#arrow_right-parsing)
+- [Validating](#arrow_right-validating)
+- [Parsing and Validating YAML with Python](#arrow_right-parsing-and-validating-yaml-with-python)
+- [Common YAML mistakes](#arrow_right-common-yaml-mistakes)
+- [Debugging YAML](#arrow_right-debugging-yaml)
 
 ### :arrow_right: Parsing
 
