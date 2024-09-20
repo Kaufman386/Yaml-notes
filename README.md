@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://yaml.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Official_YAML_Logo.svg/512px-Official_YAML_Logo.svg.png?20220206165621" width="200" height="200" alt="Yaml Logo" /></a>
 </p>
-  <p align="center">A human-friendly data serialization language for all progarmming languages.</p>
+  <p align="center"><a href="https://yaml.org/" target="blank">YAML</a> is a human-friendly <a href="https://en.wikipedia.org/wiki/Serialization" target="blank">data serialization language</a> for all progarmming languages.</p>
 <p align="center">
 
 # :book: Table of Contents <!-- omit in toc -->
