@@ -4,7 +4,7 @@
   <p align="center">A human-friendly data serialization language for all progarmming languages.</p>
 <p align="center">
 
-# Table of Contents <!-- omit in toc -->
+# :book: Table of Contents <!-- omit in toc -->
 - [YAML Basics](#star-yaml-basics)
     - [Basic Syntax](#arrow_right-basic-syntax)
     - [What is YAML?](#arrow_right-what-is-yaml)
