@@ -319,7 +319,7 @@
   | **Three tags**: string, mapping, sequence | Has All Failsafe tags pluse few more | Extension of the JSON schema plus more tag resolutions | 
   | !!str: a string value | !!null: a null value | All the nodes with '**!**' are resolved in a slightly more advanced way than it's done for JSON schema |
   | !!map: a mapping | !!bool: boolean | Strongly recommended deafult schema |
-  | !!map: a sequence | !!int: integer | Best practice to base custom schemas on Core Schema |
+  | !!seq: a sequence | !!int: integer | Best practice to base custom schemas on Core Schema |
   | **!!** is shorthand for **!\<tag:yaml.org,2002:...\>** | !!float: float | Overall, you should always use this one |
   ___
 
