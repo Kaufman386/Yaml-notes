@@ -439,7 +439,7 @@
        - GitHub Pipelines
        - BitBucket Pipelines
   - An example of a **deployment file** is [here](Demos/example-deployment.yaml)
-    - Here is a good excercise to descramble a large [docker decompose file](Demos/docker-compose.yaml) (which is a yaml file)
+    - Here is a good excercise to descramble a large [docker compose file](Demos/docker-compose.yaml) (which is a yaml file)
 
 ### :arrow_right: Compare YAML and JSON
 
