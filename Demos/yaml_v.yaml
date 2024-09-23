@@ -1,0 +1,14 @@
+person:
+  name: Mikae
+  age: 30
+  address:
+    streename: ABC
+    number: 1
+    zipcode: 1234AB
+    city: Amsterdam
+    country: The Netherlands
+  hobbies:
+    - reading
+    - programming
+    - fitness
+    - jigsaw puzzles

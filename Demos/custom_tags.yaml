@@ -1,0 +1,8 @@
+person:
+  !Person
+  name: Mike
+  age: 30
+  # Uncomment the line below, and if you run custom_tags.py, you will get an error because the 
+  # Person class does not know to assign a 'phone' variable
+  
+  # phone: 1234567890

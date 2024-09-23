@@ -6,6 +6,7 @@
 
 # :book: Table of Contents <!-- omit in toc -->
 - [YAML Basics](#star-yaml-basics)
+    - [Overview](#arrow_right-overview)
     - [Basic Syntax](#arrow_right-basic-syntax)
     - [What is YAML?](#arrow_right-what-is-yaml)
     - [YAML Use Cases](#arrow_right-yaml-use-cases)
@@ -14,7 +15,7 @@
     - [Block vs Flow Style](#arrow_right-block-vs-flow-style)
     - [YAML Building Blocks](#arrow_right-yaml-building-blocks)
 - [YAML Advanced Syntax](#star-yaml-advanced-syntax)
-    - [Overview](#arrow_right-overview)
+    - [Overview](#arrow_right-overview-1)
     - [Folding and Chomping](#arrow_right-folding-and-chomping)
     - [Nested Sequences](#arrow_right-nested-sequences)
     - [Nested Mappings](#arrow_right-nested-mappings)
@@ -24,14 +25,29 @@
     - [Tags](#arrow_right-tags)
     - [Schemas](#arrow_right-schemas)
 - [Parsing and Validation](#star-parsing-and-validation)
-    - [Overview](#arrow_right-overview)
+    - [Overview](#arrow_right-overview-2)
     - [Parsing](#arrow_right-parsing)
     - [Validating](#arrow_right-validating)
     - [Parsing and Validating YAML with Python](#arrow_right-parsing-and-validating-yaml-with-python)
+    - [Dump to YAML file with Python](#arrow_right-dump-to-yaml-file-with-python)
     - [Common YAML mistakes](#arrow_right-common-yaml-mistakes)
-    - [Debugging YAML](#arrow_right-debugging-yaml)
+- [YAML in Practice](#star-yaml-in-practice)
+    - [Overview](#arrow_right-overview-3)
+    - [YAML in Everyday Life](#arrow_right-yaml-in-everyday-life)
+    - [Compare YAML and JSON](#arrow_right-compare-yaml-and-json)
+    - [Compate YAML and XML](#arrow_right-compate-yaml-and-xml)
+
 
 # :star: YAML Basics
+### :arrow_right: Overview
+  - [Basic Syntax](#arrow_right-basic-syntax)
+  - [What is YAML?](#arrow_right-what-is-yaml)
+  - [YAML Use Cases](#arrow_right-yaml-use-cases)
+  - [YAML Features](#arrow_right-yaml-features)
+  - [YAML vs JSON](#arrow_right-yaml-vs-json)
+  - [Block vs Flow Style](#arrow_right-block-vs-flow-style)
+  - [YAML Building Blocks](#arrow_right-yaml-building-blocks)
+
 ### :arrow_right: Basic Syntax
 - Indentation
 - Sequences/Lists
@@ -107,6 +123,8 @@
 - Indentation
   - Default indentation is two spaces
 - Sequences (Lists, Arrays)
+  - Here is a [Block style sequence](Demos/sequences-block.yaml) file and a [Flow style sequence](Demos/sequences-flow.yaml) demo file
+  - Here is a combination of Block and Flow style in a [demo](Demos/sequences-block-and-flow.yaml) file
   ```YAML
   # Syntax - Sequences Block Style
   - first item in the list
@@ -118,6 +136,7 @@
   ```
 - Mappings (Key-value pairs, Dictionaries, Hashes, Objects)
   - indicated by a ": " (colon and space)
+  - Here is a [Block style mapping](Demos/mappings-block.yaml) file and a [Flow style mapping](Demos/mappings-flow.yaml) demo file
   ```YAML
   # Syntax - Mapping Block Style
   key: value
@@ -125,6 +144,7 @@
     - first item
     - second item
     - third item
+  # Here is a Block Style mapping that uses a flow-style List
   flowlist: [just, a list, in flow style]
 
   # Syntax - Mapping Flow Style
@@ -132,6 +152,7 @@
   ```
 - Scalars (Actual values, Strings, Numbers, Booleans, Dates)
   - Escaping can be done with a \
+  - Here is a [scalar demo](Demos/scalars.yaml) file
   ```YAML
   # Scalar - Regular Style
   tool: yaml
@@ -154,6 +175,7 @@
   ```
 - Documents
   - One file can contain multiple documents
+  - An example of a [yaml document](Demos/documents.yaml) file
   - Documents are separated by 3 hyphens (---)
   - Can be ended with suffix of 3 dots (...)
   ```YAML
@@ -329,15 +351,115 @@
 - [Parsing](#arrow_right-parsing)
 - [Validating](#arrow_right-validating)
 - [Parsing and Validating YAML with Python](#arrow_right-parsing-and-validating-yaml-with-python)
+- [Dump to YAML file with Python](#arrow_right-dump-to-yaml-file-with-python)
 - [Common YAML mistakes](#arrow_right-common-yaml-mistakes)
-- [Debugging YAML](#arrow_right-debugging-yaml)
 
 ### :arrow_right: Parsing
+- Conversion of one format to another
+- Proccessing YAML 
+  1. Loading YAML into our application
+     1. YAML file is processed (A stream of characters sent to the parser)
+     2. Serialization Tree is created
+     3. Tree is converted into a node craft (For representation)
+     3. Node Craft is translated to Native Data Structures
+  2. Dumping Objects to YAML file
+     1. Start from Native Data Structures in our code
+     2. Convert them into node crafts
+     2. Serialize data
+     4. Send character stream for parsing (YAML file)
 
 ### :arrow_right: Validating
+- Making sure the syntax of the YAML content is valid
+- Checking against formatting rules of YAML
+- Find problems with certain parts of the file
+- External tools are needed to validate YAML (e.g. VSCode or Browser tools)
 
 ### :arrow_right: Parsing and Validating YAML with Python
+- Python requires you to use the external PyYAML module to allow python to interpret YAML code
+  - Install PyYAML with `pip install pyyaml`
+  - If using pip3, `pip3 install pyyaml`
+- Validating & Parsing YAML while coding can be seen in these two files
+  1. [Parsing in Python](Demos/parsing.py) demo file and [Parsing in YAML](Demos/parsing.yaml) demo file
+  2. [Using Custom tags - Python](Demos/custom_tags.py) demo file and [Using custom tags - YAML](Demos/custom_tags.yaml) demo file
+- **NOTE**: When using `safe_load` import, you cannot use custom types. You must use `unsafe_load`
+  - If you do not need to use custom types, always use `safe_load`
+  - If you want to read a mult-document YAML file all at once, you can use `safeLoadAll` function
+
+### :arrow_right: Dump to YAML file with Python
+- This demonstrates how you can dump other code into a YAML file
+- You can dump custom/native Python (or any supported language) objects to YAML code
+- Dumping into a YAML while coding can be seen in these files
+  1. This [demo](Demos/dump.py) file demonstrates native Python Object dumping
+  2. This [demo](Demos/dump_person.py) file demonstrates custom Python Object dumping
 
 ### :arrow_right: Common YAML mistakes
+1. Bad Quotes
+   - It's important to use the right type of quotes if when working with...
+     - Paths
+     - RegEx
+     - Escape characters (only double quotes can be used for them)
+2. Indentation
+   - There is no explicit error when indentation is wrong
+   - YAML will serialize it incorrectly and you need to trace the indentation carefully
+3. Number Type
+   - Octal and Hex variables in YAML reserve the first digit to be a zero
+4. Duplicate Keys
+   - Duplicate keys are **not** allowed in YAML, but are allowed in JSON and XML
+   - Keep notice when you are parsing XML/JSON to YAML code
+5. Accidental List Entry
+   - Anything that starts with a dash is a list entry
+   - If you want to use a '-', you should put it in quotes
+6. List as Keys in Languages
+   - Not all languages allow this and will result in an error
 
-### :arrow_right: Debugging YAML
+   | <p align="center">Error</p> | <p align="center">Feature</p> | <p align="center">Solution</p> |
+   | ----------- | ----------- | ----------- |
+   | Bad Quotes | Using Paths? | Use single Quotes |
+   | Bad Quotes | Using regular expressions? | Use single quotes (depends on parser though) |
+   | Indentation | No explicit Indentation Error | Trace carefully |
+   | Number Type | Assigning phone numbers? | Store them in strings in case it starts with zero |
+   | Duplicate Keys | Converting code to YAML? | Check for duplicate keys |
+   | Accidental List Entry | Does your parse file use dashes? | Store it in quotes before parsing to YAML file |
+   | Duplicate Keys | Converting code to YAML? | Check for duplicate keys |
+   | List as Keys in Languages | Dumping YAML lists to a file? | Make sure keys are not lists |
+
+
+# :star: YAML in Practice
+### :arrow_right: Overview
+- [YAML in Everyday Life](#arrow_right-yaml-in-everyday-life)
+- [Compare YAML and JSON](#arrow_right-compare-yaml-and-json)
+- [Compate YAML and XML](#arrow_right-compate-yaml-and-xml)
+
+### :arrow_right: YAML in Everyday Life
+  - YAML is commonly used when deploying projects using...
+    1. Docker Compose
+    2. Kubernetes
+    3. CI/CD Pipeline Tools
+       - GitHub Actions
+       - GitHub Pipelines
+       - BitBucket Pipelines
+  - An example of a **deployment file** is [here](Demos/example-deployment.yaml)
+    - Here is a good excercise to descramble a large [docker decompose file](Demos/docker-compose.yaml) (which is a yaml file)
+
+### :arrow_right: Compare YAML and JSON
+
+  | <p align="center">YAML</p> | <p align="center">JSON</p> |
+  | ------------- | ------------- |
+  | Can be parsed with a YAML parser | Can be parsed with a YAML parser (YAML is a superset of JSON) |
+  | Comments with a # | Comments not allowed |
+  | Objects and lists are denoted with *indentation* or **{}** and **[]** | Objects and lists are denoted with **{}** and **[]** |
+  | String quotes are optional, and can be double or single | String quotes are mandatory, must be double quotes |
+  | Root node can be any valid data type | Root node must be object or list |
+  | Standard for configuration | Standard for APIs |
+  | [yaml_v_json.yaml](Demos/yaml_v.yaml) | [yaml_v_json.json](Demos/yaml_v_json.json) |
+
+
+### :arrow_right: Compate YAML and XML
+
+  | <p align="center">YAML</p> | <p align="center">XML</p> |
+  | ------------- | ------------- |
+  | Data Serialization Language | Markup language |
+  | Easier to read | Harder to read |
+  | Querying YAML relise on many different external tools | Well established options to query data in XML file |
+  | Typically, preferred option for configuration | Decreasing in popularity because of JSON and YAML |
+  | [yaml_v_xml.yaml](Demos/yaml_v.yaml) | [yaml_v_xml.xml](Demos/yaml_v_xml.xml) |

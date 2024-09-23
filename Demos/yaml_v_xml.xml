@@ -1,0 +1,17 @@
+<person>
+    <name>Mikael</name>
+    <age>30</age>
+    <address>
+        <streename>ABC</streename> 
+        <number>1</number> 
+        <zipcode>1234AB</zipcode> 
+        <city>Amsterdam</city> 
+        <country>The Netherlands</country>
+    </address>
+    <hobbies>
+        <hobby>reading</hobby>
+        <hobby>programming</hobby>
+        <hobby>fitness</hobby>
+        <hobby>jigsaw puzzles</hobby>
+    </hobbies>
+</person>
