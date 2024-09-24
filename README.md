@@ -451,7 +451,7 @@
   | String quotes are optional, and can be double or single | String quotes are mandatory, must be double quotes |
   | Root node can be any valid data type | Root node must be object or list |
   | Standard for configuration | Standard for APIs |
-  | [yaml_v_json.yaml](Demos/yaml_v.yaml) | [yaml_v_json.json](Demos/yaml_v_json.json) |
+  | [YAML v JSON.yaml](Demos/yaml_v.yaml) | [YAML v JSON.json](Demos/yaml_v_json.json) |
 
 
 ### :arrow_right: Compate YAML and XML
@@ -462,4 +462,4 @@
   | Easier to read | Harder to read |
   | Querying YAML relise on many different external tools | Well established options to query data in XML file |
   | Typically, preferred option for configuration | Decreasing in popularity because of JSON and YAML |
-  | [yaml_v_xml.yaml](Demos/yaml_v.yaml) | [yaml_v_xml.xml](Demos/yaml_v_xml.xml) |
+  | [YAML v XML.yaml](Demos/yaml_v.yaml) | [YAML v XML.xml](Demos/yaml_v_xml.xml) |
